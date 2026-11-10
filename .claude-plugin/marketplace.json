@@ -1,0 +1,15 @@
+{
+  "name": "usage-saver",
+  "description": "Usage Saver, a free plugin that makes your Claude usage last longer.",
+  "owner": {
+    "name": "Usage Saver"
+  },
+  "plugins": [
+    {
+      "name": "usage-saver",
+      "source": "./",
+      "description": "Make your Claude usage last longer by cutting wasted work, never quality or checks. Includes /handoff and /lean.",
+      "version": "0.2.1"
+    }
+  ]
+}

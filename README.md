@@ -18,7 +18,7 @@ Version 0.2.1
 
 ### In the Claude app
 
-1. Download `usage-saver.plugin` from the [latest release](https://github.com/usage-saver/usage-saver/releases/latest).
+1. Download [usage-saver.plugin](https://github.com/usage-saver/usage-saver/raw/main/usage-saver.plugin).
 2. In Claude, open **Customize**, then **Plugins**, choose the upload option, and pick the file.
 3. Done. It's saved to your account, so it also works in chat and in Claude Code.
 

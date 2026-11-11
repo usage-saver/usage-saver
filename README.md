@@ -2,9 +2,9 @@
 
 A free Claude plugin that makes your usage last longer. It teaches Claude to skip wasted work (rereading huge files, rewriting whole documents, long rambling replies, needless searches) while keeping every check and every bit of quality.
 
-It's only instructions: no code, nothing runs on your computer, and nothing is collected or sent anywhere. Free, with no accounts and no tracking. It's built to be light itself, so it doesn't eat the usage it's saving. It works on any paid plan, from Pro to Ultra, and with any model, including the top ones.
+It's only instructions: no code, nothing runs on your computer, and nothing is collected or sent anywhere. Free, with no accounts and no tracking. It's built to be light itself: about 110 tokens per chat until one of its skills is needed, so it doesn't eat the usage it's saving. It works on any paid plan (Pro, Max, Ultra, Team and Enterprise) and with any model, including the top ones.
 
-Version 0.3.1
+Version 0.3.2 ([what's new](CHANGELOG.md))
 
 ## What's inside
 
@@ -18,19 +18,24 @@ Version 0.3.1
 
 ### In the Claude app
 
-1. Download [usage-saver.plugin](https://github.com/usage-saver/usage-saver/raw/main/usage-saver.plugin).
-2. In Claude, open **Customize**, then **Plugins**, choose the upload option, and pick the file.
-3. Done. It's saved to your account, so it also works in chat and in Claude Code.
+On claude.ai or the Claude desktop app, open **Customize**, then **Plugins**, then **Add**. Pick one:
 
-If the upload won't take a `.plugin` file, rename it to `usage-saver.zip` and try again. It's the same file.
+- **Add marketplace** (gets updates): enter `usage-saver/usage-saver`, then find **Usage Saver** under **Discover** and choose **Add**. To get new versions on their own, turn on **Sync automatically** for the marketplace.
+- **Upload plugin** (one file): download [usage-saver.plugin](https://github.com/usage-saver/usage-saver/raw/main/usage-saver.plugin) and pick it. If the upload won't take a `.plugin` file, rename it to `usage-saver.zip` and try again. It's the same file. New versions won't arrive on their own this way.
+
+Either way, it's saved to your account, so it also works in chat on your phone and in Claude Code (it shows up the next time you start a session).
 
 ### In Claude Code
+
+Already added it in the Claude app? Skip this, since it syncs by itself, and installing it twice would double its instructions.
 
 ```
 /plugin install usage-saver --marketplace usage-saver/usage-saver
 ```
 
 On older versions of Claude Code, run `/plugin marketplace add usage-saver/usage-saver`, then `/plugin install usage-saver@usage-saver`.
+
+Claude Code doesn't update plugins from other marketplaces by itself. To get new versions, run `/plugin`, open **Marketplaces**, pick **usage-saver** and choose **Enable auto-update**, or run `claude plugin update usage-saver@usage-saver` in your shell.
 
 ## Free cheat sheet
 
@@ -53,6 +58,8 @@ Love the top models? Just tell Claude. It won't nudge you down, except once for 
 
 - **Pro:** Fable runs on usage credits from your first message. Set a monthly spend limit before you try it.
 - **Max and Ultra:** Fable is included for up to half your weekly limits, and it uses them faster than other models. Save it for your hardest work, and use Opus or Sonnet for everyday stuff to keep more of your week free.
+- **Team and Enterprise:** standard seats work like Pro for Fable, and premium seats like Max.
+- **On usage credits in Claude Code:** the cache lasts about five minutes instead of an hour, so finish a task in one sitting.
 - **Every plan:** cutting waste matters just as much on big plans. It's what lets your favorite model go further.
 - Plans and limits change. Settings → Usage always shows where you stand.
 
@@ -90,7 +97,9 @@ Love the top models? Just tell Claude. It won't nudge you down, except once for 
 
 ## Remove it
 
-Open **Customize**, then **Plugins**, then **Usage Saver**, and choose **Remove**.
+In the Claude app, open **Customize**, then **Plugins**, then **Usage Saver**, open its menu and choose **Remove**. To pause it instead, use its **Disable plugin** toggle.
+
+If you installed it in Claude Code, run `claude plugin uninstall usage-saver@usage-saver` in your shell.
 
 ## License
 

@@ -44,6 +44,7 @@ Excellent code is the biggest usage saver: work done right the first time never 
 - Shallow clones (`git clone --depth 1`) unless history is needed.
 - Quiet output: `-q`, `--silent`, `| tail -20`, failures only, and `git log --oneline -5` instead of full logs.
 - Use a task list for multi-step work, so progress survives without re-reading the chat.
+- In Claude Code, run `/compact` at a natural break between tasks, not mid-task. To drop a wrong path, `/rewind` to before it instead of correcting it: rewinding reuses the cache, compacting rebuilds it.
 
 ## Finishing
 

@@ -2,7 +2,7 @@
 name: save-usage
 description: Load at the start of any task beyond a quick question (code, files, documents, research). Saves usage by cutting waste, never quality.
 metadata:
-  version: "0.3.1"
+  version: "0.3.2"
 ---
 
 # Save Usage
@@ -20,7 +20,7 @@ If the user already has their own usage-saving skill, plugin or rules (in their 
 ## Where usage goes
 
 - Every message re-sends the whole chat. Caching makes the unchanged part cheap, but only while it's warm. After a long break, the whole chat is read again at full cost.
-- Switching models mid-chat restarts the cache.
+- Switching models mid-chat restarts the cache. Loading a skill doesn't, since it's added at the end.
 - The big costs: long chats, big files and images, long tool output, writing long text or code, web searches, subagents, and redoing work.
 
 ## Model and effort
@@ -37,13 +37,15 @@ Model names change; map newer models to the same tiers.
 - **After the user's first message:** if the model or effort doesn't fit the task, say so in one line and name the one that fits. The user switches it; Claude can't. If it fits, say nothing. If the effort setting isn't visible, name the right one without guessing theirs.
 - **Respect their choice.** If the user prefers a heavier model or max effort, don't nudge them down. Mention a lighter one only when the task is clearly tiny or they're near a limit, and only once.
 - If a chore chat turns into a real build (or the other way around), suggest switching once, or `/handoff` to a fresh chat on the right model.
+- A lighter model or paying with credits never drops a check: every test and review still runs in full.
 
 ## Plans
 
 Fit the advice to the user's plan when it's known. Plans and limits change, so when unsure, point to Settings → Usage rather than guessing.
 - **Pro:** Fable runs on usage credits from the first message. Before suggesting it, say it costs credits.
 - **Max and Ultra:** Fable is included for up to half the weekly limits, and it uses them faster than other models. Use it for the hardest work; for everyday tasks, a lighter model keeps more of the week free.
-- **Paying with usage credits:** use the middle tier for anything that isn't a real build. Before anything big, say in one line how heavy it is and ask: do it now on credits, or wait for the reset.
+- **Team and Enterprise:** standard seats work like Pro for Fable, and premium seats like Max.
+- **Paying with usage credits:** use the middle tier for anything that isn't a real build. Before anything big, say in one line how heavy it is and ask: do it now on credits, or wait for the reset. In Claude Code the cache lasts only about five minutes on credits (about an hour within plan limits), so keep credit-paid work in one sitting.
 - **Every plan:** cutting waste matters just as much on big plans. It's what lets heavy and top-tier models go further.
 
 ## Files, images and documents
@@ -60,7 +62,7 @@ Fit the advice to the user's plan when it's known. Plans and limits change, so w
 - **Plan before building** anything beyond a small fix. Rework is the biggest waste.
 - **Ask once, up front:** gather real choices into one set of multiple-choice questions (up to 4), not one per message.
 - **Research:** one search per fact, more only when needed. Prefer official docs, fetch a page only when the snippet isn't enough, and never repeat a search. If search has a quick and a thorough mode, use the quick one first, and the thorough one only when quick comes back thin or the fact is very new or niche.
-- Load every skill and tool the task needs in one parallel step. Skip the ones it doesn't need, and don't reload a skill already in the chat.
+- Load every skill and tool the task needs in one parallel step. Skip the ones it doesn't need, and don't reload a skill already in the chat, unless the chat was summarized since (its text is gone then).
 - **Checks run in full, but quietly:** one combined command that prints pass/fail and the failures, not full logs.
 - If the same fix fails twice, stop and rethink, or ask.
 - No subagents unless the user asks. If one would truly help, ask first and say it costs more.

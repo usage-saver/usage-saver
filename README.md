@@ -4,7 +4,7 @@ A free Claude plugin that makes your usage last longer. It teaches Claude to ski
 
 It's only instructions: no code, nothing runs on your computer, and nothing is collected or sent anywhere. Free, with no accounts and no tracking. It's built to be light itself: about 110 tokens per chat until one of its skills is needed, so it doesn't eat the usage it's saving. It works on any paid plan (Pro, Max, Ultra, Team and Enterprise) and with any model, including the top ones.
 
-Version 0.3.2 ([what's new](CHANGELOG.md))
+Version 0.3.3 ([what's new](CHANGELOG.md))
 
 ## What's inside
 

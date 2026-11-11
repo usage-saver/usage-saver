@@ -2,6 +2,11 @@
 
 What changed in each version of Usage Saver, in plain words.
 
+## 0.3.3
+
+- **New:** an icon, a gauge with its needle in the green.
+- **Tested:** all 7 version numbers match; the download file (now 8 files, with the icon) matches the repo byte for byte; Claude Code's plugin checker passed with the icon found (1 warning left: no author, on purpose); a fresh install worked, still about 110 tokens per session; the icon has no hidden metadata, and white on navy is 11.5:1 contrast; the privacy scan was clean.
+
 ## 0.3.2
 
 - **Fixed:** if a chat gets summarized, Usage Saver now loads a skill again, since the summary drops the skill's text.

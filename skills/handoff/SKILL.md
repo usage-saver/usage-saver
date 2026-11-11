@@ -2,7 +2,7 @@
 name: handoff
 description: For /handoff or "continue in a new chat". Writes a short note to paste into a fresh chat, plus which model to open it on.
 metadata:
-  version: "0.3.0"
+  version: "0.3.1"
 ---
 
 # Handoff

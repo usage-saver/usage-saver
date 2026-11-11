@@ -4,7 +4,7 @@ A free Claude plugin that makes your usage last longer. It teaches Claude to ski
 
 It's only instructions: no code, nothing runs on your computer, and nothing is collected or sent anywhere. Free, with no accounts and no tracking. It's built to be light itself, so it doesn't eat the usage it's saving. It works on any paid plan, from Pro to Ultra, and with any model, including the top ones.
 
-Version 0.3.0
+Version 0.3.1
 
 ## What's inside
 

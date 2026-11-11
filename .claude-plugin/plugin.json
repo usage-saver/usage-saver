@@ -1,6 +1,6 @@
 {
   "name": "usage-saver",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "Make your Claude usage last longer by cutting wasted work, never quality or checks. Includes /handoff and /lean.",
   "keywords": ["usage", "limits", "efficiency", "tokens", "handoff"]
 }

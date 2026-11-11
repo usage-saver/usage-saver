@@ -2,7 +2,7 @@
 name: save-usage
 description: Load at the start of any task beyond a quick question (code, files, documents, research). Saves usage by cutting waste, never quality.
 metadata:
-  version: "0.3.0"
+  version: "0.3.1"
 ---
 
 # Save Usage
@@ -34,7 +34,7 @@ If the user already has their own usage-saving skill, plugin or rules (in their 
 
 Model names change; map newer models to the same tiers.
 
-- **After the user's first message:** if the model or effort doesn't fit the task, say so in one line and name the one that fits. The user switches it; Claude can't. If it fits, say nothing.
+- **After the user's first message:** if the model or effort doesn't fit the task, say so in one line and name the one that fits. The user switches it; Claude can't. If it fits, say nothing. If the effort setting isn't visible, name the right one without guessing theirs.
 - **Respect their choice.** If the user prefers a heavier model or max effort, don't nudge them down. Mention a lighter one only when the task is clearly tiny or they're near a limit, and only once.
 - If a chore chat turns into a real build (or the other way around), suggest switching once, or `/handoff` to a fresh chat on the right model.
 
@@ -52,13 +52,14 @@ Fit the advice to the user's plan when it's known. Plans and limits change, so w
 - Screenshots and PDF pages cost far more than the same words as text. If the user is about to share many of them and only part matters, suggest the text or just the pages needed, once.
 - Don't re-read a file you just wrote. Re-read only if it may have changed.
 - **Change, don't rewrite.** Edit only what changes; never regenerate a whole file, document or artifact for a small fix. Send long content as a file instead of pasting it into the chat.
+- **Memory:** if Claude keeps memory files, read only the ones that bear on the task, several in one call.
 - **Code tasks:** read `references/coding.md` in this skill's folder once at the start, and follow it.
 
 ## Working
 
 - **Plan before building** anything beyond a small fix. Rework is the biggest waste.
 - **Ask once, up front:** gather real choices into one set of multiple-choice questions (up to 4), not one per message.
-- **Research:** one search per fact, more only when needed. Prefer official docs, fetch a page only when the snippet isn't enough, and never repeat a search.
+- **Research:** one search per fact, more only when needed. Prefer official docs, fetch a page only when the snippet isn't enough, and never repeat a search. If search has a quick and a thorough mode, use the quick one first, and the thorough one only when quick comes back thin or the fact is very new or niche.
 - Load every skill and tool the task needs in one parallel step. Skip the ones it doesn't need, and don't reload a skill already in the chat.
 - **Checks run in full, but quietly:** one combined command that prints pass/fail and the failures, not full logs.
 - If the same fix fails twice, stop and rethink, or ask.
@@ -66,7 +67,7 @@ Fit the advice to the user's plan when it's known. Plans and limits change, so w
 
 ## Replies
 
-- Lead with the answer and keep it short. Don't restate the request, recap steps or narrate between them.
+- Lead with the answer and keep it short. Don't restate the request, recap steps, narrate between them, or repeat what a card or file already shows.
 - End with what changed, what was checked, and one next step if there is one.
 - After a big session, add one line on what used the most and how to cut it next time.
 
@@ -86,11 +87,14 @@ Caching matches from the top, so wherever text gets reused (custom instructions,
 ## Tips
 
 At most one per chat, and only when it fits what just happened:
-- To fix a request, edit your last message instead of sending a correction.
+- Put related questions in one message. To fix a request, edit your last message instead of sending a correction.
 - Keep one fixed opening message for each kind of work, with the task at the end, and open it on the model that fits.
-- Turn off web search, connected apps and skills a chat doesn't need.
+- Turn off web search, connected apps and skills a chat doesn't need. Every turned-on skill adds its description to every message, so turn off any that go unused for a couple of months.
+- Research mode and web searches use a lot. Skip them when a chat doesn't need them.
 - Paste text instead of screenshots when only the words matter, and share only the PDF pages you need.
+- Settings → Usage shows where the limits stand. If the plan has a 5-hour window, start big jobs early in a fresh one.
 - On usage credits, set a monthly spend limit and keep auto-reload off (Settings → Usage → Usage credits).
 - Close to your limit? Type `/lean` to make the rest of the chat extra-lean.
+- If this Claude has it, ask "explain my usage" after a session to see where it went.
 
 The plugin's README has a free cheat sheet (model picker and tips) that costs nothing to read.

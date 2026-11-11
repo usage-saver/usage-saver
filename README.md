@@ -4,7 +4,7 @@ A free Claude plugin that makes your usage last longer. It teaches Claude to ski
 
 It's only instructions: no code, nothing runs on your computer, and nothing is collected or sent anywhere. Free, with no accounts and no tracking. It's built to be light itself: about 110 tokens per chat until one of its skills is needed, so it doesn't eat the usage it's saving. It works on any paid plan (Pro, Max, Ultra, Team and Enterprise) and with any model, including the top ones.
 
-Version 0.3.3 ([what's new](CHANGELOG.md))
+Version 0.3.4 ([what's new](CHANGELOG.md))
 
 ## What's inside
 
@@ -18,10 +18,10 @@ Version 0.3.3 ([what's new](CHANGELOG.md))
 
 ### In the Claude app
 
-On claude.ai or the Claude desktop app, open **Customize**, then **Plugins**, then **Add**. Pick one:
+On claude.ai (a phone browser works too) or the Claude desktop app, open **Customize**, then **Plugins**, then **+ Add**. Pick one:
 
-- **Add marketplace** (gets updates): enter `usage-saver/usage-saver`, then find **Usage Saver** under **Discover** and choose **Add**. To get new versions on their own, turn on **Sync automatically** for the marketplace.
-- **Upload plugin** (one file): download [usage-saver.plugin](https://github.com/usage-saver/usage-saver/raw/main/usage-saver.plugin) and pick it. If the upload won't take a `.plugin` file, rename it to `usage-saver.zip` and try again. It's the same file. New versions won't arrive on their own this way.
+- **Add from repository** (gets updates): enter `usage-saver/usage-saver`, leave **Sync automatically** on, and tap **Sync**. Then tap **Add** next to Usage Saver.
+- **Upload** (one file): download [usage-saver.plugin](https://github.com/usage-saver/usage-saver/raw/main/usage-saver.plugin), choose the upload option, and pick the file. If the upload won't take a `.plugin` file, rename it to `usage-saver.zip` and try again. It's the same file. New versions won't arrive on their own this way.
 
 Either way, it's saved to your account, so it also works in chat on your phone and in Claude Code (it shows up the next time you start a session).
 
@@ -93,7 +93,7 @@ Love the top models? Just tell Claude. It won't nudge you down, except once for 
 
 - Claude can't switch models for you. When it suggests one, tap the model picker.
 - It never skips a check or test to save usage. If a saving would weaken quality, it doesn't take it.
-- Already have your own usage-saving skill or rules? Yours win. Usage Saver steps back from anything yours covers, so nothing gets done twice, and only fills gaps yours leaves. You can still turn it off if you'd rather not have it at all, since every turned-on skill adds a little to every message.
+- Already have your own usage-saving skill or rules? Yours win. Usage Saver steps back from anything yours covers, so nothing gets done twice, and only fills gaps yours leaves. Still, both would load on bigger tasks, so if yours already covers everything, you likely don't need this plugin.
 
 ## Remove it
 

@@ -2,7 +2,7 @@
 name: lean
 description: For /lean. Switches the rest of this chat to extra-lean mode (shortest replies, no extras) until the user says to stop.
 metadata:
-  version: "0.3.3"
+  version: "0.3.4"
 ---
 
 # Lean Mode

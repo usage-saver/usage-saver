@@ -2,6 +2,11 @@
 
 What changed in each version of Usage Saver, in plain words.
 
+## 0.3.4
+
+- **README:** install steps now use the app's real button names (+ Add → Add from repository → Sync → Add), checked on a phone. It also says plainly that if you already have your own usage-saving skill, you likely don't need this one, since both would load.
+- **Tested:** only the README and version numbers changed since 0.3.3 (checked with git diff), so 0.3.3's checks still stand. All 7 version numbers match, the download file matches the repo, and the privacy scan was clean.
+
 ## 0.3.3
 
 - **New:** an icon, a gauge with its needle in the green.

@@ -2,7 +2,7 @@
 name: save-usage
 description: Load at the start of any task beyond a quick question (code, files, documents, research). Saves usage by cutting waste, never quality.
 metadata:
-  version: "0.2.1"
+  version: "0.3.0"
 ---
 
 # Save Usage
@@ -75,10 +75,19 @@ Fit the advice to the user's plan when it's known. Plans and limits change, so w
 - **One chat, one job.** When a job is done and the next is unrelated, or the chat is long, offer `/handoff`. Offer it too when the user comes back to a long chat after hours away.
 - Before anything big, say so in one line. If it's huge, ask: do it all now, split it across chats, or start with a lighter version. No option drops a check.
 
+## Reused text and Projects
+
+Caching matches from the top, so wherever text gets reused (custom instructions, Project instructions, opening messages, status notes), steady parts go first and changing parts last.
+- **Projects** hold steady files the user reuses, where they're cached and count less each time. Files that change often stay where they live (a repo, a drive), and the Project's instructions just point there. A stale copy costs usage and can mislead.
+- **Status notes and handoffs:** a short steady brief on top, the current status below, and history in a changelog rather than piling up in the notes.
+- **Batch edits:** each change to custom instructions or skill descriptions resets the cache, so suggest grouping them into one sitting.
+- **Batch work:** suggest doing related tasks back to back while the cache is warm.
+
 ## Tips
 
 At most one per chat, and only when it fits what just happened:
 - To fix a request, edit your last message instead of sending a correction.
+- Keep one fixed opening message for each kind of work, with the task at the end, and open it on the model that fits.
 - Turn off web search, connected apps and skills a chat doesn't need.
 - Paste text instead of screenshots when only the words matter, and share only the PDF pages you need.
 - On usage credits, set a monthly spend limit and keep auto-reload off (Settings → Usage → Usage credits).

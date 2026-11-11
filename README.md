@@ -4,7 +4,7 @@ A free Claude plugin that makes your usage last longer. It teaches Claude to ski
 
 It's only instructions: no code, nothing runs on your computer, and nothing is collected or sent anywhere. Free, with no accounts and no tracking. It's built to be light itself, so it doesn't eat the usage it's saving. It works on any paid plan, from Pro to Ultra, and with any model, including the top ones.
 
-Version 0.2.1
+Version 0.3.0
 
 ## What's inside
 
@@ -61,6 +61,8 @@ Love the top models? Just tell Claude. It won't nudge you down, except once for 
 - Start a fresh chat for each new job. Long chats get re-read with every message. `/handoff` makes it easy.
 - Coming back to a long chat after hours away? Start fresh with `/handoff` instead.
 - Put related questions in one message.
+- Keep one fixed opening message for each kind of work (the task goes at the end), so every chat starts the same way, on the right model.
+- Group edits to your instructions or skills into one sitting. Each change resets the cache once.
 - To fix a request, edit your last message instead of sending a correction.
 - Paste text instead of screenshots when only the words matter, and share only the PDF pages you need.
 - Research mode and web searches use a lot. Skip them when you don't need them.
@@ -76,6 +78,8 @@ Love the top models? Just tell Claude. It won't nudge you down, except once for 
 ### If you use Projects
 
 - Keep Project instructions short. Files you use again and again belong in the Project, where they're cached.
+- Files that change often are better left where they live, with a short pointer in the instructions. A stale copy costs usage and can mislead.
+- Put what rarely changes at the top of instructions and opening messages, and what changes at the bottom, since caching matches from the top.
 - If your Claude has it, ask "explain my usage" after a session to see where it went.
 
 ## Good to know

@@ -2,6 +2,12 @@
 
 What changed in each version of Usage Saver, in plain words.
 
+## 0.3.5
+
+- **Changed:** the separate `usage-saver.plugin` download is gone, so the Claude directory can check every file. To upload by hand, use GitHub's zip of the repo instead (linked in the README). Older versions on GitHub still have the old file.
+- **New:** the plugin lists its author (usage-saver), its GitHub page and its license, so the directory shows them.
+- **Tested:** all 7 version numbers match; Claude Code's plugin checker passed with no warnings; a GitHub-style zip of the repo holds exactly one plugin manifest and passes the same checker; every file is text or a PNG and under 256 KiB; the README has no links to the old file; a fresh install worked, still about 110 tokens per session; the privacy scan was clean.
+
 ## 0.3.4
 
 - **README:** install steps now use the app's real button names (+ Add → Add from repository → Sync → Add), checked on a phone. It also says plainly that if you already have your own usage-saving skill, you likely don't need this one, since both would load.

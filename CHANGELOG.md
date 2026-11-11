@@ -2,6 +2,11 @@
 
 What changed in each version of Usage Saver, in plain words.
 
+## 0.3.6
+
+- **README:** a Privacy section, so it's easy to see that Usage Saver collects, stores and sends nothing.
+- **Tested:** only the README, these notes and version numbers changed since 0.3.5 (checked with git diff), so 0.3.5's checks still stand. All 7 version numbers match, Claude Code's plugin checker passed, and the privacy scan was clean.
+
 ## 0.3.5
 
 - **Changed:** the separate `usage-saver.plugin` download is gone, so the Claude directory can check every file. To upload by hand, use GitHub's zip of the repo instead (linked in the README). Older versions on GitHub still have the old file.

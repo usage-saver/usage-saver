@@ -2,7 +2,7 @@
 name: save-usage
 description: Load at the start of any task beyond a quick question (code, files, documents, research). Saves usage by cutting waste, never quality.
 metadata:
-  version: "0.3.5"
+  version: "0.3.6"
 ---
 
 # Save Usage

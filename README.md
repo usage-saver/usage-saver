@@ -4,7 +4,7 @@ A free Claude plugin that makes your usage last longer. It teaches Claude to ski
 
 It's only instructions: no code, nothing runs on your computer, and nothing is collected or sent anywhere. Free, with no accounts and no tracking. It's built to be light itself: about 110 tokens per chat until one of its skills is needed, so it doesn't eat the usage it's saving. It works on any paid plan (Pro, Max, Ultra, Team and Enterprise) and with any model, including the top ones.
 
-Version 0.3.5 ([what's new](CHANGELOG.md))
+Version 0.3.6 ([what's new](CHANGELOG.md))
 
 ## What's inside
 
@@ -94,6 +94,10 @@ Love the top models? Just tell Claude. It won't nudge you down, except once for 
 - Claude can't switch models for you. When it suggests one, tap the model picker.
 - It never skips a check or test to save usage. If a saving would weaken quality, it doesn't take it.
 - Already have your own usage-saving skill or rules? Yours win. Usage Saver steps back from anything yours covers, so nothing gets done twice, and only fills gaps yours leaves. Still, both would load on bigger tasks, so if yours already covers everything, you likely don't need this plugin.
+
+## Privacy
+
+Usage Saver is only instructions for Claude. It has no code, and it collects, stores and sends nothing: no accounts, no tracking, no analytics. Your chats are handled by Claude as usual, under Anthropic's own privacy policy.
 
 ## Remove it
 
